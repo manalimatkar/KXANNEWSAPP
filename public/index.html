@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KXAN NEWS APP</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">KXANNEWSAPP</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="/scrape"><span class="glyphicon glyphicon-download-alt"></span>  Scrape Data</a>
+                    </li>
+                    <!-- <li><a href="#"><span class="glyphicon glyphicon-list"></span>  Articles List</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-edit"></span>  Notes</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>Local News</h1>
+                <p>Click on Article To write Comment</p>
+            </div>            
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-8" id="articleList">
+                                  
+                    </div>
+                    <div class="col-md-4">
+                    <div class="panel panel-default" id="commentsForm">
+                        <div class="panel-heading">
+                            Comments Here
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                              <div class="form-group">
+                                <label for="title">Title: </label>
+                                <input type="text" class="form-control" id="title" >
+                              </div>
+                              <div class="form-group">
+                                  <label for="comment">Comment:</label>
+                                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                                </div>
+                                <button type="button" class="btn btn-default" id="addComment">Submit</button> <button type="button" class="btn btn-danger" id="deleteNote">Delete Note</button>
+                            </form>
+                        </div>
+                    </div>
+                        <div class="well" id="articleComment">
+                             Comments section here
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
