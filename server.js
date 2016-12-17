@@ -23,6 +23,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+// we set the port of the app
+app.set('port', process.env.PORT || 3000);
+
 // Make public a static dir
 app.use(express.static("public"));
 
@@ -175,6 +178,7 @@ app.get("/deleteNote/:id", function(req, res) {
 
 
 // Listen on port 3000
-app.listen(3000, function() {
-    console.log("App running on port 3000!");
-});
+app.listen(app.get('port'), function() {
+    // then save a log of the listening to our debugger.
+    debug('Express server listening on port ' + this.address().port);
+  });
