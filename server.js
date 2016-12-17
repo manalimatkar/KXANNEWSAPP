@@ -178,7 +178,6 @@ app.get("/deleteNote/:id", function(req, res) {
 
 
 // Listen on port 3000
-app.listen(app.get('port'), function() {
-    // then save a log of the listening to our debugger.
-    debug('Express server listening on port ' + this.address().port);
-  });
+app.listen(process.env.PORT || 3000, function() {
+    console.log("App running on port");
+});
